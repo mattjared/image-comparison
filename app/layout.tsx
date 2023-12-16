@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans';
-// import { GeistMono } from 'geist/font/mono';
 import './globals.css'
-
-// const geist = GeistSans()
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: 'Image Comparison',
@@ -17,7 +15,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className} bg-gray-100`}>{children}</body>
+      <body className={`${GeistSans.className} bg-gray-100`}>
+        <div className="w-full max-w-lg mx-auto">
+          <h2 className='text-center p-12 tracking-tight text-2xl font-bold'>Image Comparison</h2>
+          <div className="px-4 py-2 grid grid-cols-3 text-center gap-8">
+            <Link href="/">Home</Link>
+            <Link href="/next-image">Next Image</Link>
+            <Link href="/image-tag">Image Tag</Link>
+          </div>
+        </div>
+        {children}
+        <div className="w-full max-w-lg mx-auto text-center pb-10">
+          <div>&copy; {new Date().getFullYear()}. <Link href="https://nextjs.org/docs/pages/api-reference/components/image" target="_blank">More on Next Image.</Link></div>
+        </div>
+      </body>
     </html>
   )
 }

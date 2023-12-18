@@ -17,7 +17,16 @@ export default function NextImage() {
         {codeString}
       </SyntaxHighlighter>
       {Array.from({ length: loops }, (_, index) => (
-        <Image key={`chicago-${index}`} src={`/chicago/${index}.jpg`} width="1000" height="250" alt="chicago pic" className="mb-6" sizes="(max-width: 768px) 500px, 250px" />
+        <Image 
+          key={`chicago-${index}`} 
+          src={`/chicago/${index}.jpg`} 
+          width="1000" 
+          height="500" 
+          alt="chicago pic" 
+          className="mb-6" 
+          placeholder='blur'
+          blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=='
+        />
       ))}
     </div>
   )

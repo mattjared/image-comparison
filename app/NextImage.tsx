@@ -17,7 +17,7 @@ export default function NextImage() {
         {codeString}
       </SyntaxHighlighter>
       {Array.from({ length: loops }, (_, index) => (
-        <Image key={`chicago-${index}`} src={`/chicago/${index}.jpg`} width="1000" height="500" alt="chicago pic" className="mb-6"/>
+        <Image key={`chicago-${index}`} src={`/chicago/${index}.jpg`} width="1000" height="500" alt="chicago pic" className="mb-6" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       ))}
     </div>
   )

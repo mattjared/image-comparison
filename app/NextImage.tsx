@@ -26,6 +26,7 @@ export default function NextImage() {
           className="mb-6" 
           placeholder='blur'
           blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=='
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw "
         />
       ))}
     </div>

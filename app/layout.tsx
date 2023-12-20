@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans';
 import './globals.css'
 import Link from "next/link";
+import Navigation from './Navigation';
 
 export const metadata: Metadata = {
   title: 'Image Comparison',
@@ -18,11 +19,7 @@ export default function RootLayout({
       <body className={`${GeistSans.className} bg-gray-100`}>
         <div className="w-full max-w-lg mx-auto">
           <h2 className='text-center p-12 tracking-tight text-2xl font-bold'>Image Comparison</h2>
-          <div className="px-4 py-2 grid grid-cols-3 text-center gap-8">
-            <Link href="/">Home</Link>
-            <Link href="/next-image">Next Image</Link>
-            <Link href="/image-tag">Image Tag</Link>
-          </div>
+          <Navigation />
         </div>
         {children}
         <div className="w-full max-w-lg mx-auto text-center pb-10">
